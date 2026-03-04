@@ -10,7 +10,7 @@
 
 <body>
     <header class="neo-header">
-        <h1>반자동 집필 + 출간 봇</h1>
+        <h1>반자동 pdf 집필 + 출간 봇</h1>
 
     </header>
 
@@ -19,7 +19,13 @@
         <section class="intro-section">
             <div class="neo-box description">
                 <h2>Write (집필)</h2>
-                <p>성공팔이 + 동기부여형 자기계발서 반자동 집필 봇</p>
+                <p>자기계발서 반자동 집필서 유형</p>
+                성공팔이·동기부여형
+                <div class="tags">
+                    <span class="neo-tag">LLM IDE</span>
+                    <span class="neo-tag">Skills</span>
+                    <span class="neo-tag">GitHub</span>
+                </div>
             </div>
 
 
@@ -28,7 +34,7 @@
                 <p>
                     <strong>Neo-Brutalism Style 3D Virtual Bookshelf</strong> showcasing static PDF documents
                     converted into interactive flipbooks.
-                    It uses <code>pdf2image</code> for processing and <code>page-flip</code> for the reading experience.
+                    It used <code>pdf2image</code> and <code>page-flip</code> for UX.
                 </p>
                 <div class="tags">
                     <span class="neo-tag">Python</span>
@@ -49,8 +55,8 @@
                 <div style="text-align: center; margin-bottom: 2rem;">
                     <h2
                         style="background: var(--primary-color); display: inline-block; padding: 0.5rem 1.5rem; border: 3px solid var(--border-color); box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);">
-                        📚 pdf 통합 출간</h2>
-                    <p style="font-weight: bold;">(`Script`로 자동 생성된 PDF 플립북)</p>
+                        📚 pdf형식 출간</h2>
+                    <p style="font-weight: bold;">`LLM crew`+`Script`로 자동 생성된 PDF 플립북</p>
                 </div>
                 <!-- 3D Bookshelf background pattern moved here to keep it contained -->
                 <div class="bookshelf-container" style="border: none; background-color: transparent;">
@@ -64,10 +70,11 @@
     </main>
 
     <footer class="neo-footer">
-        <p>2026 © <a href="https://gitsam.com/">GITSAM</a>'s
+        <p><span id="current-year"></span> © <a href="https://gitsam.com/">GITSAM</a>'s
             <a href="https://github.com/primenumbersam/pdf-flip">GitHub</a>
         </p>
     </footer>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
     <script src="assets/script.js"></script>
 </body>
 
