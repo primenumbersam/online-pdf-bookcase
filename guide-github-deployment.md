@@ -1,6 +1,6 @@
-# GitHub Deployment Guide for PDF-Flip
+# GitHub Deployment Guide for online-pdf-bookcase
 
-`pdf-flip` 프로젝트를 GitHub에 수동으로 설정하고 배포하는 단계별 가이드입니다.
+`online-pdf-bookcase` 프로젝트를 GitHub에 수동으로 설정하고 배포하는 단계별 가이드입니다.
 
 ## 1. GitHub Repository 생성 (CLI)
 
@@ -16,18 +16,18 @@ gh auth login
 # 2. 현재 디렉토리에서 레포지토리 생성 (public으로 생성 권장)
 # -y: 모든 프롬프트에 yes
 # --public: 공개 저장소
-gh repo create pdf-flip --public --source=. --remote=origin
+gh repo create online-pdf-bookcase --public --source=. --remote=origin
 ```
 
 ### 웹사이트에서 생성 시
 1. GitHub 웹사이트 우측 상단 `+` > `New repository`
-2. Repository name: `pdf-flip`
+2. Repository name: `online-pdf-bookcase`
 3. `Public` 선택 (Private은 Pages 사용 시 유료일 수 있음)
 4. `Create repository` 클릭
 5. 터미널에서 다음 명령어 실행 (YOUR_USERNAME을 본인 아이디로 변경):
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/pdf-flip.git
+git remote add origin https://github.com/YOUR_USERNAME/online-pdf-bookcase.git
 ```
 
 ## 2. 코드 푸시 (Push)
@@ -42,7 +42,7 @@ git init
 git add .
 
 # 3. 커밋
-git commit -m "initial commit: pdf-flip setup"
+git commit -m "initial commit: online-pdf-bookcase setup"
 
 # 4. 메인 브랜치 설정 및 푸시
 git branch -M main
@@ -67,7 +67,7 @@ Actions가 아무리 잘 돌아도 Pages가 꺼져있으면 사이트가 안 보
 
 1. **Settings** (상단 탭) > **Pages** (좌측 메뉴)
 2. **Build and deployment** 섹션의 **Source**를 `Deploy from a branch`로 선택 (기본값)
-3. **Branch**를 [main](file:///home/sam/github/pdf-flip/pdf_processor.py#6-80) (또는 `master`) / `/(root)` 로 선택
+3. **Branch**를 [main]으로 선택
 4. **Save** 버튼 클릭
 
 ## 4. 테스트 (자동화 확인)
@@ -91,11 +91,4 @@ git push origin main
 
 3. GitHub 레포지토리의 **Actions** 탭으로 이동합니다.
 4. `Update PDF Library` 워크플로우가 노란색(진행 중)으로 뜨는지 확인합니다.
-5. 초록색 체크(성공)가 뜨면, 잠시 후(약 1~2분) **Settings > Pages** 상단에 뜬 URL(`https://YOUR_ID.github.io/pdf-flip/`)로 접속해봅니다.
-
----
-**Tip**: Actions 탭에서 `Commit and Push Changes` 단계 로그를 보면 어떤 파일이 생성되었는지 확인할 수 있습니다.
-
-원격 변경 사항 가져오기
-
-
+5. 초록색 체크(성공)가 뜨면, 잠시 후(약 1~2분) **Settings > Pages** 상단에 뜬 URL(`https://YOUR_ID.github.io/online-pdf-bookcase/`)로 접속해봅니다.
