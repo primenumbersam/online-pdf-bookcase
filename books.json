@@ -7,17 +7,17 @@
         "pages": 14
     },
     {
-        "id": "백수가 노트북 하나로 월 1억",
-        "title": "백수가 노트북 하나로 월 1억",
-        "cover": "pdf-image/백수가 노트북 하나로 월 1억/page-01.jpg",
-        "folder": "pdf-image/백수가 노트북 하나로 월 1억/",
-        "pages": 8
-    },
-    {
         "id": "부부의 세계 - 사랑 자유 불균",
         "title": "부부의 세계   사랑 자유 불균",
         "cover": "pdf-image/부부의 세계 - 사랑 자유 불균/page-01.jpg",
         "folder": "pdf-image/부부의 세계 - 사랑 자유 불균/",
         "pages": 4
+    },
+    {
+        "id": "백수가 노트북 하나로 월 1억",
+        "title": "백수가 노트북 하나로 월 1억",
+        "cover": "pdf-image/백수가 노트북 하나로 월 1억/page-01.jpg",
+        "folder": "pdf-image/백수가 노트북 하나로 월 1억/",
+        "pages": 8
     }
 ]
