@@ -1,5 +1,6 @@
 import os
 import json
+import shutil
 from pathlib import Path
 from pdf2image import convert_from_path
 
@@ -41,6 +42,15 @@ def main():
         book_name = pdf_path.stem
         book_output_dir = output_dir / book_name
         book_output_dir.mkdir(exist_ok=True)
+
+        page_offset = 0
+        cover_source_path = source_dir / f"{book_name}-cover.png"
+        if cover_source_path.exists():
+            print(f"  Found cover image: {cover_source_path.name}")
+            cover_dest_path = book_output_dir / 'page-01.jpg'
+            shutil.copy(str(cover_source_path), str(cover_dest_path))
+            print(f"  -> Copied cover to '{cover_dest_path}'")
+            page_offset = 1
         
         # Metadata for this book
         book_info = {
@@ -60,13 +70,13 @@ def main():
 
             # Save each page as a JPG file with zero-padded numbers
             for i, image in enumerate(images):
-                image_filename = f'page-{i+1:02d}.jpg'
+                image_filename = f'page-{i + 1 + page_offset:02d}.jpg'
                 image_path = book_output_dir / image_filename
                 print(f"  -> Saving page {i+1} to '{image_path}'")
                 image.save(image_path, 'JPEG')
 
             print(f"Finished processing '{pdf_path.name}'.")
-            book_info['pages'] = len(images)
+            book_info['pages'] = len(images) + page_offset
             books_data.append(book_info)
 
         except Exception as e:
