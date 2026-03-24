@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Bookcase + Page Flip + PDF to Image</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header class="neo-header">
+        <h1>pdf 3D 책장</h1>
+
+    </header>
+
+    <main>
+
+        <section class="intro-section">
+            <div class="neo-box description">
+                <h2>딸깍 집필</h2>
+                <p>마무말대잔치 PDF 형식 전자책</p>
+                성공팔이·동기부여 책 딸깍집필
+                <div class="tags">
+                    <span class="neo-tag">채찍피티</span>
+                    <span class="neo-tag">잼미니</span>
+                    <span class="neo-tag">클났데</span>
+                </div>
+            </div>
+
+
+            <div class="neo-box">
+                <h2>반자동 출간</h2>
+                <p>
+                    <strong>3D Virtual Bookshelf,</strong> showcasing static PDF documents
+                    converted into interactive flipbooks.
+                    Used <code>pdf2image</code> and <code>page-flip</code> library.
+                </p>
+                <div class="tags">
+                    <span class="neo-tag">Python</span>
+                    <span class="neo-tag">JS Flipbook</span>
+                    <span class="neo-tag">CSS 3D</span>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+        <section class="shelf-section"
+            style="background-color: #f4f4f4; border-top: 3px solid var(--border-color); padding: 4rem 2rem;">
+            <div class="neo-box"
+                style="background-color: var(--bg-color); max-width: 1200px; margin: 0 auto; padding-top: 2rem;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h2
+                        style="background: var(--primary-color); display: inline-block; padding: 0.5rem 1.5rem; border: 3px solid var(--border-color); box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--border-color);">
+                        📚 PDF 3D Bookcase</h2>
+                    <p style="font-weight: bold;">딸깍 생성된 Flip PDF 책장</p>
+                </div>
+                <!-- 3D Bookshelf background pattern moved here to keep it contained -->
+                <div class="bookshelf-container" style="border: none; background-color: transparent;">
+                    <div class="shelf" id="shelf">
+                        <!-- Books will be injected here by script.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="neo-footer">
+        <p><span id="current-year"></span> © <a href="https://gitsam.com/">GITSAM</a>'s
+            <a href="https://github.com/primenumbersam/pdf-flip">GitHub</a>
+        </p>
+    </footer>
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
